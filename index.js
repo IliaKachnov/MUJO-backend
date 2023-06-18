@@ -9,7 +9,7 @@ import * as UserController from './controllers/UserController.js';
 import handleValidationErrors from './utils/handleValidationErrors.js';
 
 mongoose
-  .connect('mongodb+srv://admin:RdASzn1Pa02Nvg5n@mujo.1dkk0jd.mongodb.net/mujo')
+  .connect(process.env.MONGODB_URI)
   .then(() => console.log('DB ok'))
   .catch((err) => console.log('DB error', err))
 
